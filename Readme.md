@@ -1,49 +1,150 @@
-**Visual Product Search System**
+# 🎯 Visual Product Search System
 
-A full-stack project that allows users to search for products visually. Upload an image or provide an image URL, and the system returns the most visually similar products from the database.
+A full-stack project that allows users to search for products **visually**. Upload an image or provide an image URL, and the system returns the most **visually similar products** from the database.
 
-Project Overview
+---
 
-This project consists of three main services:
+## 🌟 Features
 
-Frontend
+* Upload an image or provide an image URL for search.
+* Cosine similarity-based image matching.
+* Top N results with deduplication.
+* Stores product embeddings in **MongoDB**.
+* Responsive and user-friendly **frontend**.
 
-Built with HTML, CSS, and JavaScript.
+---
 
-Provides a user interface to upload images or submit image URLs.
+## 🏗️ Architecture
 
-Displays the search results in a responsive and user-friendly layout.
+```text
+Frontend (HTML/CSS/JS)
+        |
+        v
+Backend (Node.js + Express + MongoDB)
+        |
+        v
+ML-Service (Flask + PyTorch ResNet18)
+```
 
-Backend
+* **Frontend** → Handles user input and displays results.
+* **Backend** → Receives requests, fetches embeddings, performs similarity search.
+* **ML-Service** → Generates embeddings using pretrained ResNet18.
 
-Node.js + Express server.
+---
 
-Handles incoming requests from the frontend.
+## 🛠️ Tech Stack
 
-Calls the ML-service to get image embeddings.
+| Service    | Tech Stack                                         |
+| ---------- | -------------------------------------------------- |
+| Frontend   | HTML5, CSS3, JavaScript                            |
+| Backend    | Node.js, Express, MongoDB, Axios                   |
+| ML-Service | Python, Flask, PyTorch, torchvision, Pillow, numpy |
 
-Stores product metadata and precomputed embeddings in MongoDB.
+---
 
-Performs cosine similarity computation to return the most similar products.
+## ⚡ Getting Started(How To Run)
 
-ML-Service
+### **1️⃣ Frontend**
 
-Python + Flask service.
+* Open `index.html` in your browser.
+* Ensure backend API URL is set correctly in JS.
 
-Uses PyTorch ResNet18 (pretrained) to extract image embeddings.
+### **2️⃣ Backend**
 
-Accepts file uploads or image URLs.
+```bash
+npm install
+```
 
-Returns embeddings in JSON format.
+* Set environment variables:
 
-Features
+```env
+PORT=5000
+MONGO_URI=mongodb+srv://vinayak:vinayak123@cluster0.gzflrxy.mongodb.net/
+FLASK_API_URL=http://localhost:8000/embed
+FRONTEND_URL=https://searchprodut.netlify.app/
+```
 
-Upload an image or provide an image URL for visual search.
+* Run server:
 
-Cosine similarity-based product matching.
+```bash
+node server.js
+```
 
-Returns top N visually similar products.
+### **3️⃣ ML-Service**
 
-Deduplication of results to avoid repeated images.
+```bash
+pip install flask torch torchvision pillow numpy requests
+or
+pip install -r requirements.txt
+```
 
-MongoDB integration for storing product metadata and embeddings.
+* Run service:
+
+```bash
+python app.py
+```
+
+* Runs at `http://localhost:8000/embed`.
+
+---
+
+## 🚀 Usage
+
+1. Open frontend in browser.
+2. Upload an image or enter an image URL.
+3. Click **Search**.
+4. View top visually similar products.
+
+---
+
+## 🔮 Future Improvements
+
+* Deploy services on cloud (Render / AWS / Heroku).
+* Implement caching for faster repeated searches.
+* Add FAISS or ANN indexing for scalable similarity search.
+* Enhance frontend UI with responsive design and animations.
+
+---
+
+## 📂 Project Structure
+
+```
+project-root/
+│
+├── backend/
+│   ├── node_modules/
+│   ├── product_data/
+│   ├── src/
+│   │   ├── config/
+│   │   ├── controllers/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   └── utils/
+│   ├── .env
+│   ├── generateProduct.js
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── seed.js
+│   └── server.js
+│
+├── frontend/
+│   ├── assets/
+│   ├── index.html
+│   ├── script.js
+│   └── style.css
+│
+├── ml-service/
+│   ├── embeddings/
+│   ├── __pycache__/
+│   ├── .env
+│   ├── app.py
+│   ├── model.py
+│   ├── requirements.txt
+│   
+│
+├── .gitignore
+├── Readme.md
+
+```
+
+---
