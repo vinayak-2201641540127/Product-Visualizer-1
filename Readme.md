@@ -257,7 +257,21 @@ python ml_service.py
 
 
 ---
+Project Overview:
 <img width="1907" height="828" alt="Screenshot 2025-09-01 063652" src="https://github.com/user-attachments/assets/012c1e69-53e2-423b-b5e1-5632de2fcf47" />
+
+After Selecting Imagesa and Clicking "Search":
+<img width="1920" height="1080" alt="Screenshot (118)" src="https://github.com/user-attachments/assets/d4aeab5a-05e4-4470-b180-8393d565efc8" />
+
+By Default 8 Images will come:
+<img width="1872" height="1042" alt="Screenshot 2025-09-01 063936" src="https://github.com/user-attachments/assets/5479951f-cc1a-473e-849e-9235b2641457" />
+
+After changinf range from 8 to 5:
+<img width="1894" height="843" alt="Screenshot 2025-09-01 064009" src="https://github.com/user-attachments/assets/57fdaac3-365e-4919-bb26-2da4153dd8af" />
+
+
+
+
 
 
 
