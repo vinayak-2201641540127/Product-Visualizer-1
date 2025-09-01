@@ -47,7 +47,6 @@ ML-Service (Flask + PyTorch ResNet18)
 ### **1️⃣ Frontend**
 
 * Open `index.html` in your browser.
-* Ensure backend API URL is set correctly in JS.
 
 ### **2️⃣ Backend**
 
@@ -73,9 +72,10 @@ node server.js
 ### **3️⃣ ML-Service**
 
 ```bash
-pip install flask torch torchvision pillow numpy requests
-or
 pip install -r requirements.txt
+or
+pip install flask torch torchvision pillow numpy requests
+
 ```
 
 * Run service:
@@ -179,6 +179,7 @@ Using URL:
 
 Outcome:
 <img width="1920" height="1080" alt="Screenshot (120)" src="https://github.com/user-attachments/assets/e12edb10-7066-4e03-94e9-d80bf55f5fea" />
+
 
 
 
