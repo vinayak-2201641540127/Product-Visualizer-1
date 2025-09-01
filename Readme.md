@@ -55,7 +55,7 @@ ML-Service (Flask + PyTorch ResNet18)
 npm install
 ```
 
-* Set environment variables:
+* Set environment variables(in backend):
 
 ```env
 PORT=5000
@@ -148,3 +148,4 @@ project-root/
 ```
 
 ---
+
