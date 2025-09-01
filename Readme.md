@@ -56,7 +56,7 @@ npm install
 ```
 
 * Set environment variables(in backend):
-
+Add .env file to the backend directory and keep the data as follows(don't change):
 ```env
 PORT=5000
 MONGO_URI=mongodb+srv://vinayak:vinayak123@cluster0.gzflrxy.mongodb.net/
@@ -179,6 +179,7 @@ Using URL:
 
 Outcome:
 <img width="1920" height="1080" alt="Screenshot (120)" src="https://github.com/user-attachments/assets/e12edb10-7066-4e03-94e9-d80bf55f5fea" />
+
 
 
 
