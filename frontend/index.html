@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Product Matcher</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Visual Product Matcher</h1>
+
+    <div class="upload-section">
+      <input type="file" id="imageUpload" accept="image/*">
+      <input type="text" id="imageUrl" placeholder="Or paste image URL">
+      <button onclick="searchProducts()">Search</button>
+
+      <!-- Slider for number of results -->
+      <label for="numResults">Results to show:</label>
+      <input type="range" id="numResults" min="5" max="10" value="8"
+        oninput="document.getElementById('numResultsValue').innerText=this.value">
+      <span id="numResultsValue">8</span>
+    </div>
+
+
+    <!-- Preview -->
+    <div id="preview"></div>
+
+    <!-- Results -->
+    <div id="results"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

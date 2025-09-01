@@ -1,0 +1,45 @@
+# ====================
+# Node.js / Backend
+# ====================
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+
+# ====================
+# Python / ML-Service
+# ====================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+ENV/
+ml_service/__pycache__/
+ml_service/*.pyc
+ml_service/*.pyo
+ml_service/*.pyd
+*.sqlite3
+*.db
+*.egg-info/
+dist/
+build/
+
+# ====================
+# IDE / OS files
+# ====================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ====================
+# Misc
+# ====================
+*.zip
+*.tar.gz
+.env.local
+.env.*.local
